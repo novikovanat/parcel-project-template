@@ -90,11 +90,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-family: DM Sans;
   font-style: normal;
   font-weight: bold;
@@ -107,7 +107,8 @@ body {
   border: 0;
 }
 
-.footer-button:focus, .footer-button:hover {
+.footer-button:focus,
+.footer-button:hover {
   background-color: #d41443;
 }
 /*# sourceMappingURL=main.css.map */
