@@ -1,8 +1,4 @@
 .contacts-card {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-
   padding-top: 43px;
   padding-bottom: 43px;
   padding-right: 20px;
@@ -15,11 +11,9 @@
 }
 
 .contacts-card-header {
-  display: inline-block;
-  // width: 80px;
-  line-height: 1.86;
-  padding-left: 40px;
-  padding-right: 40px;
+  display: block;
+  width: 80px;
+  height: 16px;
 
   background: getColor('brown');
   border-radius: 4px;
