@@ -18,8 +18,7 @@
         "components/_him.scss",
         "components/_slider.scss",
         "components/_contacts.scss",
-        "components/_footer.scss",
-        "utils/_colors.scss"
+        "components/_footer.scss"
     ],
     "names": [],
     "file": "main.css"
