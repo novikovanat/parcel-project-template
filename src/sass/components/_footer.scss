@@ -106,3 +106,9 @@
   border-top: 1px solid #e1e1e1;
   background-color: getColor(light-background-color);
 }
+
+.footer-social-svg {
+  fill: getColor(accent-color);
+  width: 34px;
+  height: 34px;
+}
