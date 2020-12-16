@@ -4,7 +4,6 @@
  */
 
 // Стили для файла с примером HTML-фрагмента
-@import './example';
 @import './base/annul-margins-paddings';
 @import './base/annul-ul-list-style';
 @import './base/visually-hidden';
@@ -12,13 +11,13 @@
 @import './utils/colors';
 @import './utils/size';
 @import './components/body';
-@import "./utils/colors";
-@import "./utils/size";
-@import "components/body";
+@import './utils/colors';
+@import './utils/size';
+@import 'components/body';
 //@import "components/header";
-@import "components/hero";
-@import "components/products";
-@import "components/him";
-@import "components/slider";
-@import "components/contacts";
-@import "components/footer";
+@import 'components/hero';
+@import 'components/products';
+@import 'components/him';
+@import 'components/slider';
+@import 'components/contacts';
+@import 'components/footer';
