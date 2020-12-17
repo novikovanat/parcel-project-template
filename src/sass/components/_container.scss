@@ -6,11 +6,10 @@
   @include size(mobile) {
     width: 480px;
   }
-  @include size(tablet){
+  @include size(tablet) {
     width: 768px;
-}
+  }
   @include size(desktop) {
     width: 1200px;
-}
-
+  }
 }
