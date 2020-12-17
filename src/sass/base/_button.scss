@@ -1,0 +1,25 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.31;
+  color: getColor(accent-color);
+
+  padding-left: 37px;
+  padding-right: 37px;
+  height: 44px;
+  border-radius: 22px;
+  border: 0;
+  background-color: white;
+
+  &:focus,
+  &:hover {
+    color: white;
+    background-color: getColor(accent-color);
+  }
+}
