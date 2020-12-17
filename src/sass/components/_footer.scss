@@ -54,24 +54,40 @@
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 1.31;
   color: getColor(accent-color);
 
-  width: 200px;
+  padding-left: 37px;
+  padding-right: 37px;
   height: 44px;
   border-radius: 22px;
   border: 0;
-  background-color: getColor(white);
+  background-color: white;
 
   &:focus,
   &:hover {
-    color: getColor(white);
+    color: white;
     background-color: getColor(accent-color);
   }
 }
-
+.footer-social {
+  display: flex;
+}
 .footer-social-svg {
-  fill: getColor(accent-color);
+  width: inherit;
+  height: inherit;
+  fill: white;
+}
+.footer-social-container {
+  display: flex;
+}
+.footer-social-link {
   width: 34px;
   height: 34px;
+  border-radius: 50%;
+  background-color: #fea5bb;
+  &:focus,
+  &:hover {
+    background-color: getColor(accent-color);
+  }
 }
