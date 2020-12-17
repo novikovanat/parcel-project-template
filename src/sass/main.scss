@@ -5,18 +5,17 @@
 
 // Стили для файла с примером HTML-фрагмента
 
-@import './base/annul-margins-paddings';
-@import './base/annul-ul-list-style';
-@import './base/visually-hidden';
-@import './base/image-display-block';
-@import './utils/colors';
-@import './utils/size';
-@import './components/body';
-@import './utils/colors';
-@import './utils/size';
+@import 'base/annul-margins-paddings';
+@import 'base/annul-ul-list-style';
+@import 'base/visually-hidden';
+@import 'base/image';
+@import 'base/link';
+@import 'components/address';
+@import 'utils/colors';
+@import 'utils/size';
+@import 'components/container';
 @import 'components/body';
 @import 'components/header';
-@import 'components/container';
 @import 'components/hero';
 @import 'components/products';
 @import 'components/him';
