@@ -1,3 +1,132 @@
 .header {
+  position: relative;
+  background-color: pink;
+  height: 60px;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.header-logo {
+  display: block;
+  width: 200px;
+  height: 50px;
+  background-image: url(../images/svg/header-logo.svg);
+  @include size(desktop) {
+    margin-right: 110px;
+  }
+}
+
+.header-menu-container {
+  @media screen and (max-width: 1199px) {
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 250px;
+    // height: 500px;
+    background-color: #e17992;
+    text-align: center;
+    padding: 60px 0px;
+  }
+
+  @include size(desktop) {
+    display: flex;
+  }
+}
+
+.header-close-btn {
+  position: absolute;
+  top: 23px;
+  right: 28px;
+  width: 30px;
+  height: 30px;
   background-color: #fff;
+  @include size(desktop) {
+    display: none;
+  }
+}
+
+.header-order-btn_menu {
+  width: 160px;
+  height: 45px;
+  background: #ffffff;
+  font-size: 16px;
+  line-height: 1.313;
+  color: #d41443;
+  border: none;
+  border-radius: 22px;
+  margin-bottom: 20px;
+  @include size(desktop) {
+    display: none;
+  }
+}
+
+.header-menu {
+  @include size(desktop) {
+    display: flex;
+    .item:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+  .item {
+    @media screen and (max-width: 1199px) {
+      padding: 10px 20px;
+      text-align: start;
+      border: 1px solid #e18298;
+    }
+  }
+}
+
+.header-menu-link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.286;
+  text-decoration: none;
+  color: getColor('white');
+  &:hover {
+    color: getColor('accent-color');
+  }
+  @include size(desktop) {
+    font-size: 16px;
+    line-height: 1.313;
+  }
+}
+
+.header-btn-container {
+  display: flex;
+  align-items: center;
+  .item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.header-burger {
+  width: 40px;
+  height: 40px;
+  @include size(desktop) {
+    display: none;
+  }
+}
+
+.header-order-btn {
+  display: none;
+  width: 160px;
+  height: 45px;
+  background: #ffffff;
+  font-size: 16px;
+  line-height: 1.313;
+  color: #d41443;
+  border: none;
+  border-radius: 22px;
+  @include size(tablet) {
+    display: block;
+  }
 }
