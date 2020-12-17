@@ -26,6 +26,11 @@ var multiItemSlider = (function () {
     var _mainElement = document.querySelector(selector),
       _sliderWrapper = _mainElement.querySelector('.slider__wrapper'),
       _sliderItems = _mainElement.querySelectorAll('.slider__item'),
+      _sliderControls = _mainElement.querySelectorAll('.slider__control'),
+      _sliderControlLeft = _mainElement.querySelector('.slider__control_left'),
+      _sliderControlRight = _mainElement.querySelector(
+        '.slider__control_right',
+      ),
       _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width),
       _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width),
       _html = _mainElement.innerHTML,
@@ -38,7 +43,6 @@ var multiItemSlider = (function () {
       _items = [],
       _interval = 0,
       _states = [
-        { active: false, minWidth: 0, count: 1 },
         { active: false, minWidth: 320, count: 1 },
         { active: false, minWidth: 768, count: 1 },
         { active: false, minWidth: 1200, count: 1 },
@@ -46,7 +50,7 @@ var multiItemSlider = (function () {
       _config = {
         isCycling: false,
         direction: 'right',
-        interval: 5000,
+        interval: 4000,
         pause: true,
       };
 
