@@ -1,61 +1,139 @@
-<section class="slider">
+<section class="slider__section">
   <div class="container">
     <picture>
       <source
+        media="(max-width: 767px)"
         srcset="
           ./images/slider/mobile/mobile-slider-piccollage.jpg    1x,
           ./images/slider/mobile/mobile-slider-piccollage@2x.jpg 2x
         "
-        media="(max-width: 767px)"
       />
       <source
+        media="(max-width: 1199px)"
         srcset="
           ./images/slider/tablet/tablet-slider-piccollange.jpg    1x,
           ./images/slider/tablet/tablet-slider-piccollange@2x.jpg 2x
         "
-        media="(max-width: 1199px)"
       />
       <source
+        media="(min-width: 1200px)"
         srcset="
           ./images/slider/desktop/desktop-slider-piccollange.jpg    1x,
           ./images/slider/desktop/desktop-slider-piccollange@2x.jpg 2x
         "
-        media="(min-width: 1200px)"
       />
-      <img src="./images/slider/mobile/mobile-slider-piccollage.jpg" alt="" />
+      <img
+        class="slider__section_collage"
+        src="./images/slider/mobile/mobile-slider-piccollage.jpg"
+        alt="picture collage"
+      />
     </picture>
-    <div class="slider-responses">
-      <picture>
-        <source
-          srcset="
-            ./images/slider/mobile/mobile-slider-piccollage.jpg    1x,
-            ./images/slider/mobile/mobile-slider-piccollage@2x.jpg 2x
-          "
-          media="(max-width: 767px)"
-        />
-        <source
-          srcset="
-            ./images/slider/tablet/tablet-slider-piccollange.jpg    1x,
-            ./images/slider/tablet/tablet-slider-piccollange@2x.jpg 2x
-          "
-          media="(max-width: 1199px)"
-        />
-        <source
-          srcset="
-            ./images/slider/desktop/desktop-slider-piccollange.jpg    1x,
-            ./images/slider/desktop/desktop-slider-piccollange@2x.jpg 2x
-          "
-          media="(min-width: 1200px)"
-        />
-        <img src="./images/slider/mobile/mobile-slider-piccollage.jpg" alt="" />
-      </picture>
-      <p>
-        Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam
-        sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis
-        in nibh vel risus.
-      </p>
-      <h2>Emily, Los Angeles</h2>
+    <div class="slider">
+      <div class="slider__wrapper">
+        <div class="slider__item">
+          <div class="slider__content">
+            <img
+              class="slider__content_img"
+              srcset="
+                ./images/slider/mobile/slider-comment-pic-1.jpg    1x,
+                ./images/slider/mobile/slider-comment-pic-1@2x.jpg 2x
+              "
+              src="./images/slider/mobile/slider-comment-pic-1.jpg"
+              alt="Emily, Los Angeles"
+            />
+            <p class="slider__content_text">
+              Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+              Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
+              ipsum primis in nibh vel risus.
+            </p>
+            <svg width="4" height="4" style="background-color: #c7133e">
+              <use></use>
+            </svg>
+            <svg width="4" height="4" style="background-color: #c7133e">
+              <use></use>
+            </svg>
+            <svg width="4" height="4" style="background-color: #c7133e">
+              <use></use>
+            </svg>
+            <h2 class="slider__content_title">Emily, Los Angeles</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <div class="slider__content">
+            <img
+              class="slider__content_img"
+              srcset="
+                ./images/slider/mobile/slider-comment-pic-2.jpg    1x,
+                ./images/slider/mobile/slider-comment-pic-2@2x.jpg 2x
+              "
+              src="./images/slider/mobile/slider-comment-pic-2.jpg"
+              alt="Emily, Los Angeles"
+            />
+            <p class="slider__content_text">
+              Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+              Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
+              ipsum primis in nibh vel risus.
+            </p>
+            <svg width="4" height="4" style="background-color: #c7133e">
+              <use></use>
+            </svg>
+            <svg width="4" height="4" style="background-color: #c7133e">
+              <use></use>
+            </svg>
+            <svg width="4" height="4" style="background-color: #c7133e">
+              <use></use>
+            </svg>
+            <h2 class="slider__content_title">Isabella, New York</h2>
+          </div>
+        </div>
+        <div class="slider__item">
+          <div class="slider__content">
+            <img
+              class="slider__content_img"
+              srcset="
+                ./images/slider/mobile/slider-comment-pic-3.jpg    1x,
+                ./images/slider/mobile/slider-comment-pic-3@2x.jpg 2x
+              "
+              src="./images/slider/mobile/slider-comment-pic-3.jpg"
+              alt="Emily, Los Angeles"
+            />
+            <p class="slider__content_text">
+              Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+              Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
+              ipsum primis in nibh vel risus.
+            </p>
+            <svg width="4" height="4" style="background-color: #c7133e">
+              <use></use>
+            </svg>
+            <svg width="4" height="4" style="background-color: #c7133e">
+              <use></use>
+            </svg>
+            <svg width="4" height="4" style="background-color: #c7133e">
+              <use></use>
+            </svg>
+            <h2 class="slider__content_title">Emma, Chicago</h2>
+          </div>
+        </div>
+      </div>
     </div>
+    <!-- <a class="slider__control slider__control_left" href="#" role="button"></a>
+    <a class="slider__control slider__control_right" href="#" role="button"></a> -->
+    <ol class="slider__indicators">
+      <li class="active" data-slide-to="0">
+        <svg width="12" height="12">
+          <use></use>
+        </svg>
+      </li>
+      <li class="" data-slide-to="1">
+        <svg width="12" height="12">
+          <use></use>
+        </svg>
+      </li>
+      <li class="" data-slide-to="2">
+        <svg width="12" height="12">
+          <use></use>
+        </svg>
+      </li>
+    </ol>
   </div>
 </section>
--
