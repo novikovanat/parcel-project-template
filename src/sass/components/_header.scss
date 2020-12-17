@@ -1,10 +1,14 @@
 .header {
   position: relative;
-  background-color: pink;
-  height: 60px;
-  padding: 5px 20px;
+  left: 0px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  background-color: pink;
+  padding: 5px 20px;
+  @include size(tablet) {
+    padding: 37px 35px 15px 35px;
+  }
 }
 
 .header-nav {
@@ -35,20 +39,28 @@
     background-color: #e17992;
     text-align: center;
     padding: 60px 0px;
+    filter: drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25));
   }
 
   @include size(desktop) {
+    // position: static;
     display: flex;
+    // width: 100%;
+    // background-color: rgba($color: #000000, $alpha: 0);
+    // padding: 0px;
   }
 }
-
+.header-menu-container.is-open {
+  display: block;
+}
 .header-close-btn {
   position: absolute;
-  top: 23px;
-  right: 28px;
+  top: 15px;
+  right: 18px;
+  padding: 0px;
   width: 30px;
   height: 30px;
-  background-color: #fff;
+  background-color: getColor('white');
   @include size(desktop) {
     display: none;
   }
@@ -57,10 +69,10 @@
 .header-order-btn_menu {
   width: 160px;
   height: 45px;
-  background: #ffffff;
+  background: getColor('white');
   font-size: 16px;
   line-height: 1.313;
-  color: #d41443;
+  color: getColor('accent-color');
   border: none;
   border-radius: 22px;
   margin-bottom: 20px;
@@ -70,17 +82,19 @@
 }
 
 .header-menu {
+  .item {
+    padding: 10px 20px;
+    text-align: start;
+    border: 1px solid #e18298;
+    @include size(desktop) {
+      padding: 0px;
+      border: none;
+    }
+  }
   @include size(desktop) {
     display: flex;
     .item:not(:last-child) {
       margin-right: 35px;
-    }
-  }
-  .item {
-    @media screen and (max-width: 1199px) {
-      padding: 10px 20px;
-      text-align: start;
-      border: 1px solid #e18298;
     }
   }
 }
@@ -103,14 +117,21 @@
 .header-btn-container {
   display: flex;
   align-items: center;
+  .item {
+    display: flex;
+  }
+
   .item:not(:last-child) {
-    margin-right: 30px;
+    @include size(tablet) {
+      margin-right: 30px;
+    }
   }
 }
 
 .header-burger {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
+  padding: 0px;
   @include size(desktop) {
     display: none;
   }
@@ -123,9 +144,10 @@
   background: #ffffff;
   font-size: 16px;
   line-height: 1.313;
-  color: #d41443;
+  color: getColor('accent-color');
   border: none;
   border-radius: 22px;
+  cursor: pointer;
   @include size(tablet) {
     display: block;
   }
