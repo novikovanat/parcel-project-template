@@ -33,10 +33,10 @@
   background-size: cover;
   margin-bottom: 80px;
 
-  @media screen and (min-width: 768px) {
+  @include size(tablet) {
     margin-bottom: 121px;
   }
-  @media screen and (min-width: 1200px) {
+  @include size(desktop) {
     margin-bottom: 123px;
   }
 }
@@ -47,13 +47,13 @@
   width: 100%;
   margin: 0 auto;
 
-  @media screen and (min-width: 480px) {
+  @include size(mobile) {
     width: 280px;
   }
-  @media screen and (min-width: 768px) {
+  @include size(tablet) {
     width: 620px;
   }
-  @media screen and (min-width: 1200px) {
+  @include size(desktop) {
     width: 926px;
   }
 }
@@ -78,10 +78,10 @@
   margin-left: auto;
   margin-bottom: 29px;
 
-  @media screen and (min-width: 768px) {
+  @include size(tablet) {
     margin-bottom: 19px;
   }
-  @media screen and (min-width: 1200px) {
+  @include size(desktop) {
     margin-bottom: 15px;
   }
 }
@@ -97,10 +97,10 @@
   background: #fafafa;
   padding: 20px 50px 20px 50px;
 
-  @media screen and (min-width: 768px) {
+  @include size(tablet) {
     padding: 47px 36px 28px 60px;
   }
-  @media screen and (min-width: 1200px) {
+  @include size(desktop) {
     padding: 47px 54px 32px 59px;
   }
 }
@@ -114,7 +114,7 @@
   color: 'black';
   margin-bottom: 39px;
 
-  @media screen and (min-width: 768px) {
+  @include size(tablet) {
     margin-bottom: 35px;
   }
 }
@@ -132,6 +132,14 @@
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
+  padding-bottom: 170px;
+
+  @include size(tablet) {
+    padding-bottom: 197px;
+  }
+  @include size(desktop) {
+    padding-bottom: 234px;
+  }
 }
 
 .slider__indicators li {
