@@ -106,9 +106,24 @@
   border-top: 1px solid #e1e1e1;
   background-color: getColor(light-background-color);
 }
-
+.footer-social {
+  display: flex;
+}
 .footer-social-svg {
-  fill: getColor(accent-color);
+  width: inherit;
+  height: inherit;
+  fill: white;
+}
+.footer-social-container {
+  display: flex;
+}
+.footer-social-link {
   width: 34px;
   height: 34px;
+  border-radius: 50%;
+  background-color: #fea5bb;
+  &:focus,
+  &:hover {
+    background-color: getColor(accent-color);
+  }
 }
