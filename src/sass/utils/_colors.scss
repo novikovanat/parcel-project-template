@@ -1,14 +1,14 @@
 $colors: (
-        "brown":#F0D1A5,
-        "accent-color":#D41443,
-        "black":#000000,
-        "gray-text":#907E82,
-        "gray-btn":#ecebeb,
-        "white":#ffffff,
-        "intensive-pink":#FFA5BA,
-        "dark-background-color":#FFB8CA,
-        "light-background-color":#FFF5F6,
-        "green":#C2E297,
+  'brown': #f0d1a5,
+  'accent-color': #d41443,
+  'black': #000000,
+  'gray-text': #907e82,
+  'gray-btn': #ecebeb,
+  'white': #ffffff,
+  'intensive-pink': #ffa5ba,
+  'dark-background-color': #ffb8ca,
+  'light-background-color': #fff5f6,
+  'green': #c2e297,
 );
 
 @function getColor($key) {
