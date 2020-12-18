@@ -6,9 +6,9 @@
   font-family: DM Sans;
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.31;
-  color: getColor(accent-color);
+  color: getColor('accent-color');
 
   padding-left: 37px;
   padding-right: 37px;
@@ -17,9 +17,13 @@
   border: 0;
   background-color: white;
 
+  @include size(tablet) {
+    font-size: 16px;
+  }
+
   &:focus,
   &:hover {
     color: white;
-    background-color: getColor(accent-color);
+    background-color: getColor('accent-color');
   }
 }
