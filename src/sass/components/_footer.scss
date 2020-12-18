@@ -108,6 +108,7 @@
 }
 .footer-social {
   display: flex;
+  justify-content: right;
 }
 .footer-social-svg {
   width: inherit;
@@ -116,6 +117,8 @@
 }
 .footer-social-container {
   display: flex;
+  margin-right: 25px;
+  margin-bottom: 50px;
 }
 .footer-social-link {
   width: 34px;
@@ -126,6 +129,9 @@
   &:hover {
     background-color: getColor(accent-color);
   }
+}
+.footer-contakt {
+  text-align: right;
 }
 .copyright {
   display: flex;
