@@ -27,7 +27,7 @@
 }
 
 .products-main-title {
-  margin-bottom: 31px;
+  margin-bottom: 144px;
   font-family: Titan One;
   font-style: normal;
   font-weight: normal;
@@ -42,6 +42,14 @@
 }
 
 .cards-list {
+  display: block;
+
+  @include size(tablet) {
+    display: flex;
+  }
+}
+
+.cards-list {
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -51,7 +59,7 @@
   height: 485px;
   background-color: getColor('dark-background-color');
   border-radius: 24px;
-  margin-bottom: 17px;
+  margin-bottom: 130px;
 }
 
 .cards-list:last-child {
@@ -69,7 +77,9 @@
 .cards-img {
   position: absolute;
   display: block;
-  z-index: 6;
+  top: 0;
+  left: 0;
+  transform: translate(15px, -113px);
 }
 
 .cards-box-title {
