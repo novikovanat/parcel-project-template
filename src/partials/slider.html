@@ -2,14 +2,14 @@
   <div class="container">
     <picture>
       <source
-        media="(min-width: 767px)"
+        media="(max-width: 767px)"
         srcset="
           ./images/slider/mobile/mobile-slider-piccollage.jpg    1x,
           ./images/slider/mobile/mobile-slider-piccollage@2x.jpg 2x
         "
       />
       <source
-        media="(min-width: 768px)"
+        media="(max-width: 1199px)"
         srcset="
           ./images/slider/tablet/tablet-slider-piccollange.jpg    1x,
           ./images/slider/tablet/tablet-slider-piccollange@2x.jpg 2x
@@ -41,19 +41,21 @@
               src="./images/slider/mobile/slider-comment-pic-1.jpg"
               alt="Emily, Los Angeles"
             />
-            <p class="slider__content_text">
-              Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
-              Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
-              ipsum primis in nibh vel risus.
-            </p>
-            <svg width="4" height="4" style="background-color: #c7133e">
-              <use></use>
+            <div>
+              <p class="slider__content_text">
+                Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+                Aliquam sem. In hendrerit nulla quam nunc, accumsan congue.
+                Lorem ipsum primis in nibh vel risus.
+              </p>
+            </div>
+            <svg class="slider__content_reddot" width="4" height="4">
+              <use href="./images/svg/red-dot.svg"></use>
             </svg>
-            <svg width="4" height="4" style="background-color: #c7133e">
-              <use></use>
+            <svg class="slider__content_reddot" width="4" height="4">
+              <use href="./images/svg/red-dot.svg"></use>
             </svg>
-            <svg width="4" height="4" style="background-color: #c7133e">
-              <use></use>
+            <svg class="slider__content_reddot" width="4" height="4">
+              <use href="./images/svg/red-dot.svg"></use>
             </svg>
             <h2 class="slider__content_title">Emily, Los Angeles</h2>
           </div>
@@ -74,14 +76,14 @@
               Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
               ipsum primis in nibh vel risus.
             </p>
-            <svg width="4" height="4" style="background-color: #c7133e">
-              <use></use>
+            <svg class="slider__content_reddot" width="4" height="4">
+              <use href="./images/svg/red-dot.svg"></use>
             </svg>
-            <svg width="4" height="4" style="background-color: #c7133e">
-              <use></use>
+            <svg class="slider__content_reddot" width="4" height="4">
+              <use href="./images/svg/red-dot.svg"></use>
             </svg>
-            <svg width="4" height="4" style="background-color: #c7133e">
-              <use></use>
+            <svg class="slider__content_reddot" width="4" height="4">
+              <use href="./images/svg/red-dot.svg"></use>
             </svg>
             <h2 class="slider__content_title">Isabella, New York</h2>
           </div>
@@ -102,38 +104,29 @@
               Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
               ipsum primis in nibh vel risus.
             </p>
-            <svg width="4" height="4" style="background-color: #c7133e">
-              <use></use>
+            <svg class="slider__content_reddot" width="4" height="4">
+              <use href="./images/svg/red-dot.svg"></use>
             </svg>
-            <svg width="4" height="4" style="background-color: #c7133e">
-              <use></use>
+            <svg class="slider__content_reddot" width="4" height="4">
+              <use href="./images/svg/red-dot.svg"></use>
             </svg>
-            <svg width="4" height="4" style="background-color: #c7133e">
-              <use></use>
+            <svg class="slider__content_reddot" width="4" height="4">
+              <use href="./images/svg/red-dot.svg"></use>
             </svg>
             <h2 class="slider__content_title">Emma, Chicago</h2>
           </div>
         </div>
       </div>
+      <a
+        class="slider__control slider__control_left"
+        href="#"
+        role="button"
+      ></a>
+      <a
+        class="slider__control slider__control_right"
+        href="#"
+        role="button"
+      ></a>
     </div>
-    <!-- <a class="slider__control slider__control_left" href="#" role="button"></a>
-    <a class="slider__control slider__control_right" href="#" role="button"></a> -->
-    <ol class="slider__indicators">
-      <li class="active" data-slide-to="0">
-        <svg width="12" height="12">
-          <use></use>
-        </svg>
-      </li>
-      <li class="" data-slide-to="1">
-        <svg width="12" height="12">
-          <use></use>
-        </svg>
-      </li>
-      <li class="" data-slide-to="2">
-        <svg width="12" height="12">
-          <use></use>
-        </svg>
-      </li>
-    </ol>
   </div>
 </section>

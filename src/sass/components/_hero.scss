@@ -1,0 +1,235 @@
+.hero-section {
+  max-width: 100%;
+  background-color: getColor('dark-background-color');
+}
+
+.hero-container {
+  position: relative;
+
+  padding-top: 193px;
+  padding-bottom: 160px;
+  padding-left: 20px;
+
+  background-image: url(../images/hero/hero-ice-mobile-1x.png),
+    url(../images/hero/hero-ellipse-pink-mobile-1x.png);
+  background-position: bottom right 32px, right center;
+  background-repeat: no-repeat;
+
+  @include size(tablet) {
+    padding-top: 102px;
+    padding-bottom: 173px;
+    padding-left: 34px;
+
+    background-image: url(../images/hero/hero-ice-tablet-1x.png),
+      url(../images/hero/hero-woman-tablet-1x.png),
+      url(../images/hero/hero-ellipse-pink-tablet-1x.png),
+      url(../images/hero/hero-milk-tablet-1x.png),
+      url(../images/hero/hero-ellipse-white-tablet-1x.png),
+      url(../images/hero/hero-ellipse-white-tablet-1x.png);
+
+    background-position: bottom right 247px, bottom right 34px,
+      right 137px bottom 46px, left 34px bottom 28px, top 94px right 34px,
+      top 151px right 34px;
+  }
+
+  @include size(desktop) {
+    padding-top: 171px;
+    padding-bottom: 292px;
+    padding-left: 115px;
+
+    background-image: url(../images/hero/hero-ice-desktop-1x.png),
+      url(../images/hero/hero-woman-desktop-1x.png),
+      url(../images/hero/hero-ellipse-pink-desktop-1x.png),
+      url(../images/hero/hero-milk-desktop-1x.png),
+      url(../images/hero/hero-ellipse-white-desktop-1x.png),
+      url(../images/hero/hero-ellipse-white-desktop-1x.png);
+    background-position: bottom right 450px, bottom right 109px,
+      right 267px bottom 75px, left 77px bottom 45px, top 156px right 97px,
+      top 248px right 97px;
+  }
+}
+
+.hero-text-box {
+  text-align: left;
+}
+
+.hero-text {
+  margin-bottom: 19px;
+  width: 218px;
+  height: 106px;
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.15;
+
+  text-transform: uppercase;
+
+  color: getColor('white');
+
+  @include size(tablet) {
+    margin-bottom: 20px;
+    width: 162px;
+    height: 80px;
+
+    font-size: 22px;
+  }
+
+  @include size(desktop) {
+    margin-bottom: 25px;
+    width: 227px;
+    height: 137px;
+
+    font-size: 38px;
+  }
+}
+
+.hero-text-accent {
+  line-height: 0.9;
+  font-size: 48px;
+  color: getColor('accent-color');
+
+  @include size(tablet) {
+    font-size: 34px;
+  }
+
+  @include size(desktop) {
+    font-size: 58px;
+  }
+}
+
+.hero-button {
+  width: 62px;
+  height: 24px;
+
+  padding: 9px 15px;
+
+  text-decoration: none;
+
+  margin-right: 8px;
+
+  font-size: 8px;
+  line-height: 1.25;
+
+  border: 1px solid transparent;
+  border-radius: 20px;
+
+  color: getColor('white');
+  background-color: getColor('accent-color');
+
+  &:hover,
+  &:focus {
+    background-color: #c7133e;
+  }
+
+  @include size(desktop) {
+    width: 102px;
+    height: 40px;
+
+    margin-right: 15px;
+
+    padding: 15px 23px;
+
+    font-size: 14px;
+    line-height: 1.3;
+  }
+}
+
+.hero-button-white {
+  color: getColor('accent-color');
+  background-color: getColor('white');
+
+  width: 83px;
+  height: 24px;
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+
+  @include size(desktop) {
+    margin-right: 15px;
+    width: 138px;
+    height: 40px;
+  }
+}
+
+.hero-made-box {
+  position: absolute;
+  left: 154px;
+  bottom: 59px;
+
+  width: 114px;
+  height: 48px;
+  font-size: 8px;
+  line-height: 1.5;
+  font-weight: normal;
+
+  color: getColor('white');
+
+  @include size(mobile-only) {
+    display: none;
+  }
+
+  @include size(desktop) {
+    left: 295px;
+    bottom: 102px;
+    width: 200px;
+    height: 78px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+.hero-svg {
+  display: block;
+}
+
+.hero-info {
+  position: absolute;
+  top: 96px;
+  right: 44px;
+
+  @include size(desktop) {
+    top: 160px;
+    right: 115px;
+  }
+
+  @include size(mobile-only) {
+    display: none;
+  }
+}
+
+.hero-info-box {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.hero-info-number {
+  font-family: Titan One;
+
+  font-size: 28px;
+  line-height: 1.15;
+
+  letter-spacing: 0.04em;
+
+  color: getColor('accent-color');
+
+  @include size(desktop) {
+    font-size: 46px;
+  }
+}
+
+.hero-info-text {
+  font-weight: normal;
+  font-size: 8px;
+  line-height: 1.28;
+
+  color: getColor('white');
+
+  @include size(desktop) {
+    font-size: 14px;
+  }
+}
