@@ -127,3 +127,11 @@
     background-color: getColor(accent-color);
   }
 }
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  border-top: 1px solid #e1e1e1;
+  background-color: getColor(light-background-color);
+}
