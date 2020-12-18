@@ -23,9 +23,13 @@
     background-image: url(../images/hero/hero-ice-tablet-1x.png),
       url(../images/hero/hero-woman-tablet-1x.png),
       url(../images/hero/hero-ellipse-pink-tablet-1x.png),
-      url(../images/hero/hero-milk-tablet-1x.png);
+      url(../images/hero/hero-milk-tablet-1x.png),
+      url(../images/hero/hero-ellipse-white-tablet-1x.png),
+      url(../images/hero/hero-ellipse-white-tablet-1x.png);
+
     background-position: bottom right 247px, bottom right 34px,
-      right 137px bottom 46px, left 34px bottom 28px;
+      right 137px bottom 46px, left 34px bottom 28px, top 94px right 34px,
+      top 151px right 34px;
   }
 
   @include size(desktop) {
@@ -36,9 +40,12 @@
     background-image: url(../images/hero/hero-ice-desktop-1x.png),
       url(../images/hero/hero-woman-desktop-1x.png),
       url(../images/hero/hero-ellipse-pink-desktop-1x.png),
-      url(../images/hero/hero-milk-desktop-1x.png);
+      url(../images/hero/hero-milk-desktop-1x.png),
+      url(../images/hero/hero-ellipse-white-desktop-1x.png),
+      url(../images/hero/hero-ellipse-white-desktop-1x.png);
     background-position: bottom right 450px, bottom right 109px,
-      right 267px bottom 75px, left 77px bottom 45px;
+      right 267px bottom 75px, left 77px bottom 45px, top 156px right 97px,
+      top 248px right 97px;
   }
 }
 
@@ -92,7 +99,6 @@
 }
 
 .hero-button {
-  display: block;
   width: 62px;
   height: 24px;
 

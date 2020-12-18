@@ -8,7 +8,7 @@
   font-weight: bold;
   font-size: 16px;
   line-height: 1.31;
-  color: getColor(accent-color);
+  color: getColor('accent-color');
 
   padding-left: 37px;
   padding-right: 37px;
@@ -20,6 +20,6 @@
   &:focus,
   &:hover {
     color: white;
-    background-color: getColor(accent-color);
+    background-color: getColor('accent-color');
   }
 }
