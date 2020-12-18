@@ -42,12 +42,7 @@ var multiItemSlider = (function () {
       _step = (_itemWidth / _wrapperWidth) * 100,
       _items = [],
       _interval = 0,
-      _states = [
-        { active: false, minWidth: 0, count: 1 },
-        { active: false, minWidth: 576, count: 2 },
-        { active: false, minWidth: 992, count: 3 },
-        { active: false, minWidth: 1200, count: 4 },
-      ],
+      _states = [{ active: false, minWidth: 0, count: 1 }],
       _config = {
         isCycling: false,
         direction: 'right',
