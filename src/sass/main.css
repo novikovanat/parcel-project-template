@@ -153,6 +153,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
 }
 
 .footer-social-svg {
@@ -165,6 +168,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 25px;
+  margin-bottom: 50px;
 }
 
 .footer-social-link {
@@ -176,5 +181,24 @@ body {
 
 .footer-social-link:focus, .footer-social-link:hover {
   background-color: #d41443;
+}
+
+.footer-contakt {
+  text-align: right;
+}
+
+.copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 45px;
+  border-top: 1px solid #e1e1e1;
+  background-color: #fff5f6;
 }
 /*# sourceMappingURL=main.css.map */
