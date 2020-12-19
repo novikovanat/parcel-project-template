@@ -1,4 +1,4 @@
-<section class="products">
+<section class="products" id="products">
     <div class="container">
         <div class="products-title">
             <p class="products-text-title">100% natural</p>
@@ -6,66 +6,92 @@
         </div>
         <ul class="cards-item list">
             <li class="cards-list">
-                <div class="cards-img">
-                <img src="./images/products/mobile/product-icecream.png" alt="мороженое в стаканчике" width="249" height="252">
-                </div>
-                <div class="cards-box">
-                    <h3 class="cards-box-title">ice cream</h3>
-                    <svg class="cards-svg" width="26" height="6">
-                        <use href="">
+                <picture>
+                    <source
+                        srcset="./images/products/mobile/product-icecream.png 1x, ./images/products/mobile/product-icecream@x2.png 2x"
+                        media="(max-width: 767px)" />
+                    <source
+                        srcset="./images/products/tablet/product-icecream.png 1x, ./images/products/tablet/product-icecream@x2.png 2x"
+                        media="(min-width: 768px)" />
+                    <source
+                        srcset="./images/products/desktop/product-icecream.png 1x, ./images/products/desktop/product-icecream@x2.png 2x"
+                        media="(min-width: 1200px)" />
+                    <img src="./images/products/mobile/product-icecream.png" class="cards-img"
+                        alt="мороженое в стаканчике">
+                </picture>
+                <h3 class="cards-box-title">ice cream</h3>
+                <a href="#" class="cards-link">
+                    <svg class="cards-svg">
+                        <use href="../src/images/svg/group-3.svg">
                         </use>
                     </svg>
-                    <p class="cards-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.
-                        </p>
-                    <a href="">
-                        <svg class="cards-icon" width="40" height="40">
-                            <use href="">
-                            </use>
-                        </svg>
-                    </a>
-                </div>
+                </a>
+                <p class="cards-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et. dolore magna aliqua facilisis.</p>
+                <a href="#" class="icon-link">
+                    <svg class="cards-icon" width="40" height="40">
+                        <use href="./images/svg/arrow-right2.svg">
+                        </use>
+                    </svg>
+                </a>
             </li>
             <li class="cards-list">
-                <div class="cards-img">
-                    <img src="./images/products/mobile/product-icecoffee.png" alt="холодный кофе" width="249" height="252">
-                </div>
-                <div class="cards-box">
-                    <h3 class="cards-box-title">ice coffee</h3>
-                    <svg class="cards-svg" width="26" height="6">
+                <picture>
+                    <source
+                        srcset="./images/products/mobile/product-icecoffee.png 1x, ./images/products/mobile/product-icecoffee@x2.png 2x"
+                        media="(max-width: 767px)" />
+                    <source
+                        srcset="./images/products/tablet/product-icecoffee.png 1x, ./images/products/tablet/product-icecoffee@x2.png 2x"
+                        media="(min-width: 768px)" />
+                    <source
+                        srcset="./images/products/desktop/product-icecoffee.png 1x, ./images/products/desktop/product-icecoffee@x2.png 2x"
+                        media="(min-width: 1200px)" />
+                    <img src="./images/products/mobile/product-icecoffee.png" class="cards-img" alt="холодный кофе">
+                </picture>
+                <h3 class="cards-box-title">ice coffee</h3>
+                <a href="#" class="cards-link">
+                    <svg class="cards-svg">
+                        <use href="../src/images/svg/group-3.svg">
+                        </use>
+                    </svg>
+                </a>
+                <p class="cards-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et. dolore magna aliqua facilisis.</p>
+                <a href="#" class="icon-link">
+                    <svg class="cards-icon" width="40" height="40">
                         <use href="">
                         </use>
                     </svg>
-                    <p class="cards-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut
-                        labore et</p>
-                    <a href="">
-                        <svg class="cards-icon" width="40" height="40">
-                            <use href="">
-                            </use>
-                        </svg>
-                    </a>
-                </div>
+                </a>
             </li>
             <li class="cards-list">
-                <div class="cards-img">
-                    <img src="./images/products/mobile/product-milkshake.png" alt="молочный коктейль" width="249" height="252">
-                </div>
-                <div class="cards-box">
-                    <h3 class="cards-box-title">milkshakes</h3>
-                    <svg class="cards-svg" width="26" height="6">
+                <picture>
+                    <source
+                        srcset="./images/products/mobile/product-milkshake.png 1x, ./images/products/mobile/product-milkshake@x2.png 2x"
+                        media="(max-width: 767px)" />
+                    <source
+                        srcset="./images/products/tablet/product-milkshake.png 1x, ./images/products/tablet/product-milkshake@x2.png 2x"
+                        media="(min-width: 768px)" />
+                    <source
+                        srcset="./images/products/desktop/product-milkshake.png 1x, ./images/products/desktop/product-milkshake@x2.png 2x"
+                        media="(min-width: 1200px)" />
+                    <img src="./images/products/mobile/product-milkshake.png" class="cards-img" alt="молочный коктейль">
+                </picture>
+                <h3 class="cards-box-title">milkshakes</h3>
+                <a href="#" class="cards-link">
+                    <svg class="cards-svg">
+                        <use href="../src/images/svg/group-3.svg">
+                        </use>
+                    </svg>
+                </a>
+                <p class="cards-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et. dolore magna aliqua facilisis.</p>
+                <a href="#" class="icon-link">
+                    <svg class="cards-icon" width="40" height="40">
                         <use href="">
                         </use>
                     </svg>
-                    <p class="cards-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut
-                        labore et</p>
-                    <a href="">
-                        <svg class="cards-icon" width="40" height="40">
-                            <use href="">
-                            </use>
-                        </svg>
-                    </a>
-                </div>
+                </a>
             </li>
         </ul>
     </div>
