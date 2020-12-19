@@ -114,7 +114,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.86;
-  color: 'black';
+  color: getColor('black');
   padding-bottom: 212px;
 
   @include size(tablet) {
