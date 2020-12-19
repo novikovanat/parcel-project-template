@@ -1,9 +1,10 @@
 .button {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-family: DM Sans;
+  font-family: DM Sans sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -12,14 +13,27 @@
 
   padding-left: 37px;
   padding-right: 37px;
+  width: 200px;
   height: 44px;
   border-radius: 22px;
   border: 0;
   background-color: white;
 
+  &::after {
+    content: '';
+    background-image: url(../images/svg/Vector.svg);
+    margin-left: 14px;
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+  }
   &:focus,
   &:hover {
     color: white;
     background-color: getColor('accent-color');
+  }
+  &:focus::after,
+  &:hover::after {
+    background-image: url(../images/svg/Vectorwhite.svg);
   }
 }
