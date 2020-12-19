@@ -185,6 +185,7 @@
   letter-spacing: 0.04em;
 
   color: getColor('white');
+  overflow: hidden;
 
   @include size(tablet) {
     padding-right: 11px;
@@ -208,7 +209,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  fill: getColor('white');
 
   @include size(desktop) {
     margin-top: 32px;
@@ -235,4 +235,12 @@
   @include size(desktop) {
     margin-top: 62px;
   }
+}
+
+.cards-icon {
+  width: 40px;
+  height: 40px;
+  fill: getColor('accent-color');
+  background-color: getColor('white');
+  border-radius: 50%;
 }
