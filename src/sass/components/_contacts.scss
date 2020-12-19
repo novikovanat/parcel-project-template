@@ -201,6 +201,7 @@
 
   &:focus .arrow-svg,
   &:hover .arrow-svg {
+    @include transition('transition-property');
     fill: getColor('white');
   }
 }
@@ -213,6 +214,7 @@
   &:hover,
   &:focus .arrow-svg,
   &:hover .arrow-svg {
+    @include transition('transition-property');
     color: getColor('accent-color');
     background-color: getColor('white');
     fill: getColor('accent-color');
