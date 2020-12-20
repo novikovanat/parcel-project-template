@@ -243,7 +243,7 @@
   border-radius: 50%;
   background-color: getColor('white');
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(background-color);
   margin-top: 30px;
 
   &:hover,
