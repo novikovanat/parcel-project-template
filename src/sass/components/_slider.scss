@@ -96,7 +96,6 @@
   position: relative;
   width: 100%;
   height: auto;
-  font-family: DM Sans;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -147,17 +146,18 @@
 .slider__content_title {
   font-family: DM Sans;
   font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.86;
   color: getColor('black');
   padding-bottom: 128px;
 
   @include size(tablet) {
     padding-bottom: 166px;
+    font-size: 16px;
   }
   @include size(desktop) {
     padding-bottom: 179px;
+    font-size: 20px;
   }
 }
 
