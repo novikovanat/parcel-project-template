@@ -1,0 +1,217 @@
+.him-background {
+  background-color: getColor('light-background-color');
+}
+
+.him-section-title {
+  font-family: Titan One;
+  line-height: 1.16;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 125px;
+  padding-bottom: 26px;
+
+  @include size(tablet-only) {
+    padding-top: 130px;
+    padding-bottom: 50px;
+  }
+
+  @include size(desktop) {
+    padding-bottom: 55px;
+  }
+
+  h2 {
+    font-size: 34px;
+    line-height: 1.15;
+    color: getColor('accent-color');
+    margin-bottom: 26px;
+
+    @include size(tablet) {
+      font-size: 48px;
+    }
+
+    @include size(desktop) {
+      font-size: 58px;
+      letter-spacing: 0.06em;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+    color: getColor('intensive-pink');
+    margin-bottom: 15px;
+
+    @include size(tablet) {
+      font-size: 26px;
+    }
+    @include size(desktop) {
+      font-size: 30px;
+    }
+  }
+}
+
+.bullet-him {
+  font-family: Titan One;
+  font-size: 36px;
+  line-height: 1.138;
+  text-transform: uppercase;
+  color: getColor('accent-color');
+  margin-top: 16px;
+  margin-bottom: 16px;
+  @include size(tablet) {
+    margin-top: 36px;
+  }
+
+  @include size(tablet) {
+    margin-top: 40px;
+  }
+}
+
+.him-div-bg {
+  box-sizing: content-box;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+  color: getColor('gray-text');
+  margin-top: 46px;
+  margin-bottom: 25px;
+
+
+  :first-child {
+    color: getColor('black')
+  }
+
+  .line {
+    padding-bottom: 17px;
+    @include size(tablet) {
+      padding-bottom: 62px;
+      @include size(desktop) {
+        padding-bottom: 45px;
+      }
+    }
+  }
+
+  @include size(tablet) {
+    width: 340px;
+    padding-left: 17px;
+    padding-right: 36px;
+    font-size: 14px;
+  }
+
+  @include size(desktop) {
+    min-width: 463px;
+    font-size: 16px;
+    padding-left: 74px;
+    padding-right: 117px;
+
+
+  }
+
+}
+
+.him-text-padding {
+  padding-top: 35px;
+  padding-bottom: 15px;
+}
+
+.him-bg {
+  //background-image: url(./images/him/desktop/how-its-made-milk.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    //background-image: url(./images/him/desktop/how-its-made-milk.png);
+  }
+
+  @media screen and(min-width: 481px) {
+
+  }
+
+  // tablet
+  @media screen and(min-width: 768px) {
+    padding-left: 17px;
+  }
+
+  // desktop
+  @media screen and(min-width: 1200px) {
+    background-position-x: center;
+    //background-image: url(../images/him/desktop/how-its-made-milk.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      //background-image: url(../images/him/desktop/how-its-made-milk@x2.png);
+    }
+  }
+}
+
+.btn-him {
+  align-items: center;
+  background: getColor('white');
+  color: getColor('accent-color');
+  border-color: transparent;
+}
+
+.him-flex-container {
+  flex-grow: 1;
+  justify-content: space-between;
+  padding-bottom: 39px;
+
+  @include size(tablet) {
+    padding-bottom: 66px;
+    display: flex;
+  }
+
+  @include size(desktop) {
+    padding-bottom: 66px;
+  }
+}
+
+.him-picture {
+  @include size(mobile) {
+    width: 280px;
+  }
+
+
+  @include size(tablet) {
+    width: 340px;
+  }
+
+  @include size(desktop) {
+    width: 516px;
+  }
+}
+
+
+.him-svg {
+  width: 33px;
+  height: 50px;
+  fill: black;
+}
+
+.him-list {
+  padding-left: 20px;
+  @include size(tablet) {
+    padding-left: 0;
+  }
+}
+
+.him-item {
+  width: 100%;
+  @include size(mobile) {
+    size: 150px;
+  }
+  @include size(tablet) {
+    width: 180px;
+  }
+  @include size(desktop) {
+    width: 222px;
+  }
+}
