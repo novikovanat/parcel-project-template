@@ -1,5 +1,5 @@
 .footer {
-  background-color: getColor(light-background-color);
+  background-color: getColor('light-background-color');
   padding-top: 113px;
   padding-bottom: 43px;
   @include size(tablet) {
@@ -19,7 +19,7 @@
     line-height: 21px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: getColor(intensive-pink);
+    color: getColor('intensive-pink');
     padding-bottom: 17px;
     @include size(tablet) {
       font-size: 26px;
@@ -33,7 +33,7 @@
     }
   }
   &-head-second {
-    color: getColor(accent-color);
+    color: getColor('accent-color');
 
     font-family: Titan One, sans-serif;
     font-style: normal;
@@ -59,8 +59,6 @@
     @include size(tablet) {
       flex-direction: row;
     }
-    @include size(desktop) {
-    }
   }
   &-left {
     width: 232px;
@@ -79,8 +77,8 @@
       width: calc(100% / 2);
     }
   }
-  &-contakt {
-    color: getColor(accent-color);
+  &-contact {
+    color: getColor('accent-color');
   }
   &-social {
     display: flex;
@@ -89,7 +87,7 @@
   &-social-svg {
     width: inherit;
     height: inherit;
-    fill: white;
+    fill: getColor('white');
   }
   &-social-container {
     display: flex;
@@ -107,10 +105,10 @@
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    background-color: #fea5bb;
+    background-color: getColor('intensive-pink');
     &:focus,
     &:hover {
-      background-color: getColor(accent-color);
+      background-color: getColor('accent-color');
     }
   }
   &-contakt {
@@ -119,7 +117,7 @@
 }
 
 .copyright-text {
-  color: getColor(gray-text);
+  color: getColor('gray-text');
   width: 190px;
   text-align: center;
   font-size: 14px;
@@ -138,7 +136,7 @@
   align-items: center;
   height: 90px;
   border-top: 1px solid #e1e1e1;
-  background-color: getColor(light-background-color);
+  background-color: getColor('light-background-color');
   @include size(tablet) {
     height: 73px;
   }
