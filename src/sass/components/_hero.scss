@@ -11,8 +11,8 @@
   padding-left: 20px;
 
   background-image: url(../images/hero/hero-ice-mobile-1x.png),
-    url(../images/hero/hero-ellipse-pink-mobile-1x.png);
-  background-position: bottom right 32px, right center;
+    url(../images/hero/hero-ellipse-pink-tablet-1x.png);
+  background-position: bottom right 32px, right -50px center;
   background-repeat: no-repeat;
 
   @include size(tablet) {
@@ -49,14 +49,28 @@
   }
 }
 
+@media screen and(min-width:1200px) {
+    // background-position-x: center;
+    background-image: url(тут все твои имеджи обынчные);
+  }
+  
+  @extend %media-retina {
+    background-image: url(тут все твои имеджи для ретины);
+  }
+}
+
 .hero-text-box {
   text-align: left;
 }
 
 .hero-text {
+  display: grid;
+
   margin-bottom: 19px;
+
   width: 218px;
   height: 106px;
+
   font-family: Titan One;
   font-style: normal;
   font-weight: 400;
@@ -99,12 +113,12 @@
 }
 
 .hero-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
   width: 62px;
   height: 24px;
-
-  padding: 9px 15px;
-
-  text-decoration: none;
 
   margin-right: 8px;
 
@@ -117,6 +131,8 @@
   color: getColor('white');
   background-color: getColor('accent-color');
 
+  cursor: pointer;
+
   &:hover,
   &:focus {
     background-color: #c7133e;
@@ -127,8 +143,6 @@
     height: 40px;
 
     margin-right: 15px;
-
-    padding: 15px 23px;
 
     font-size: 14px;
     line-height: 1.3;
@@ -148,7 +162,6 @@
   }
 
   @include size(desktop) {
-    margin-right: 15px;
     width: 138px;
     height: 40px;
   }
@@ -179,10 +192,6 @@
     font-size: 14px;
     line-height: 1.4;
   }
-}
-
-.hero-svg {
-  display: block;
 }
 
 .hero-info {
@@ -231,5 +240,46 @@
 
   @include size(desktop) {
     font-size: 14px;
+  }
+}
+
+.hero-svg-arrow-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  outline: none;
+
+  margin-top: 7px;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+  background-color: getColor('white');
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include size(desktop) {
+    width: 26px;
+    height: 26px;
+
+    margin-top: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+}
+
+.svg-arrow {
+  width: 6px;
+  height: 6px;
+  fill: getColor('accent-color');
+
+  @include size(desktop) {
+    width: 9px;
+    height: 9px;
   }
 }
