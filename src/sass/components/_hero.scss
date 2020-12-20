@@ -102,7 +102,7 @@
   width: 218px;
   height: 106px;
 
-  font-family: Titan One;
+  font-family: Titan One, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 26px;
@@ -166,7 +166,7 @@
 
   &:hover,
   &:focus {
-    background-color: #c7133e;
+    background-color: getColor('hover-button');
   }
 
   @include size(desktop) {
@@ -189,7 +189,7 @@
 
   &:hover,
   &:focus {
-    background-color: #ecebeb;
+    background-color: getColor('hover-white-button');
   }
 
   @include size(desktop) {
@@ -248,7 +248,7 @@
 }
 
 .hero-info-number {
-  font-family: Titan One;
+  font-family: Titan One, sans-serif;
 
   font-size: 28px;
   line-height: 1.15;

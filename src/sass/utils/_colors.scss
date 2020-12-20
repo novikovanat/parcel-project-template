@@ -9,6 +9,8 @@ $colors: (
   'dark-background-color': #ffb8ca,
   'light-background-color': #fff5f6,
   'green': #c2e297,
+  'hover-button': #c7133e,
+  'hover-white-button': #ecebeb,
 );
 
 @function getColor($key) {
