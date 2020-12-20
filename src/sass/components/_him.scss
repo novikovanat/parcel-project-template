@@ -65,31 +65,33 @@
     margin-top: 40px;
   }
 
-  &::before{
+  &::before {
     content: "";
     display: block;
     background-repeat: no-repeat;
     height: 50px;
     margin-bottom: 16px;
-    @include size(tablet){
+    @include size(tablet) {
       margin-bottom: 36px;
     }
-    @include size(desktop){
+    @include size(desktop) {
       margin-bottom: 40px
     }
   }
 }
-.milk::before{
+
+.milk::before {
   background-image: url("../../src/images/him/cow-milk.svg");
-  width: 33px;}
+  width: 33px;
+}
 
 
-.apple::before{
+.apple::before {
   background-image: url("../../src/images/him/apple-basket.svg");
   width: 50px;
 }
 
-.candy::before{
+.candy::before {
   background-image: url("../../src/images/him/heart-candy.svg");
   width: 44px;
 }
@@ -175,8 +177,8 @@
     screen and (min-resolution: 2dppx) {
       background-image: url(../../src/images/him/desktop/how-its-made-milk@x2.png)
     }
-    }
   }
+}
 
 .btn-him {
   align-items: center;
@@ -247,5 +249,11 @@
   width: 10px;
   height: 10px;
   display: block;
-  margin-left:10px;
+  margin-left: 10px;
+  @include transition(fill);
+
+  .btn-him:hover &,
+  .n-him:focus & {
+    fill: getColor('white');
+  }
 }
