@@ -1,6 +1,7 @@
 .icon-link {
   transform: rotate(0deg);
   &.btn-open {
+    transition-duration: 0.5s;
     transform: rotate(-90deg);
   }
 }
@@ -45,6 +46,7 @@
   }
 
   &.product-open {
+    transition-duration: 1s;
     transform: translateY(0%);
   }
 
