@@ -117,83 +117,16 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\images\\svg\\header-logo.svg":[["header-logo.57e0236f.svg","images/svg/header-logo.svg"],"images/svg/header-logo.svg"],"./..\\images\\hero\\hero-ice-mobile-1x.png":[["hero-ice-mobile-1x.6a30b597.png","images/hero/hero-ice-mobile-1x.png"],"images/hero/hero-ice-mobile-1x.png"],"./..\\images\\hero\\hero-ellipse-pink-tablet-1x.png":[["hero-ellipse-pink-tablet-1x.389e3859.png","images/hero/hero-ellipse-pink-tablet-1x.png"],"images/hero/hero-ellipse-pink-tablet-1x.png"],"./..\\images\\hero\\hero-ice-mobile-@x2.png":[["hero-ice-mobile-@x2.37350d51.png","images/hero/hero-ice-mobile-@x2.png"],"images/hero/hero-ice-mobile-@x2.png"],"./..\\images\\hero\\hero-ellipse-pink-tablet-@x2.png":[["hero-ellipse-pink-tablet-@x2.2aa1a81b.png","images/hero/hero-ellipse-pink-tablet-@x2.png"],"images/hero/hero-ellipse-pink-tablet-@x2.png"],"./..\\images\\hero\\hero-ice-tablet-1x.png":[["hero-ice-tablet-1x.2e2abdc1.png","images/hero/hero-ice-tablet-1x.png"],"images/hero/hero-ice-tablet-1x.png"],"./..\\images\\hero\\hero-woman-tablet-1x.png":[["hero-woman-tablet-1x.5bb36ff4.png","images/hero/hero-woman-tablet-1x.png"],"images/hero/hero-woman-tablet-1x.png"],"./..\\images\\hero\\hero-milk-tablet-1x.png":[["hero-milk-tablet-1x.bc35a73c.png","images/hero/hero-milk-tablet-1x.png"],"images/hero/hero-milk-tablet-1x.png"],"./..\\images\\hero\\hero-ellipse-white-tablet-1x.png":[["hero-ellipse-white-tablet-1x.88287cac.png","images/hero/hero-ellipse-white-tablet-1x.png"],"images/hero/hero-ellipse-white-tablet-1x.png"],"./..\\images\\hero\\hero-ice-tablet-@x2.png":[["hero-ice-tablet-@x2.4855e718.png","images/hero/hero-ice-tablet-@x2.png"],"images/hero/hero-ice-tablet-@x2.png"],"./..\\images\\hero\\hero-woman-tablet-@x2.png":[["hero-woman-tablet-@x2.477b8f19.png","images/hero/hero-woman-tablet-@x2.png"],"images/hero/hero-woman-tablet-@x2.png"],"./..\\images\\hero\\hero-milk-tablet-@x2.png":[["hero-milk-tablet-@x2.5e0fbeb3.png","images/hero/hero-milk-tablet-@x2.png"],"images/hero/hero-milk-tablet-@x2.png"],"./..\\images\\hero\\hero-ellipse-white-tablet-@x2.png":[["hero-ellipse-white-tablet-@x2.8107a569.png","images/hero/hero-ellipse-white-tablet-@x2.png"],"images/hero/hero-ellipse-white-tablet-@x2.png"],"./..\\images\\hero\\hero-ice-desktop-1x.png":[["hero-ice-desktop-1x.c634ab60.png","images/hero/hero-ice-desktop-1x.png"],"images/hero/hero-ice-desktop-1x.png"],"./..\\images\\hero\\hero-woman-desktop-1x.png":[["hero-woman-desktop-1x.1feb3819.png","images/hero/hero-woman-desktop-1x.png"],"images/hero/hero-woman-desktop-1x.png"],"./..\\images\\hero\\hero-ellipse-pink-desktop-1x.png":[["hero-ellipse-pink-desktop-1x.f6725d15.png","images/hero/hero-ellipse-pink-desktop-1x.png"],"images/hero/hero-ellipse-pink-desktop-1x.png"],"./..\\images\\hero\\hero-milk-desktop-1x.png":[["hero-milk-desktop-1x.2d600c1d.png","images/hero/hero-milk-desktop-1x.png"],"images/hero/hero-milk-desktop-1x.png"],"./..\\images\\hero\\hero-ellipse-white-desktop-1x.png":[["hero-ellipse-white-desktop-1x.ff6a49c6.png","images/hero/hero-ellipse-white-desktop-1x.png"],"images/hero/hero-ellipse-white-desktop-1x.png"],"./..\\images\\hero\\hero-ice-desktop-@x2.png":[["hero-ice-desktop-@x2.c9c6348f.png","images/hero/hero-ice-desktop-@x2.png"],"images/hero/hero-ice-desktop-@x2.png"],"./..\\images\\hero\\hero-woman-desktop-@x2.png":[["hero-woman-desktop-@x2.bd60de1c.png","images/hero/hero-woman-desktop-@x2.png"],"images/hero/hero-woman-desktop-@x2.png"],"./..\\images\\hero\\hero-ellipse-pink-desktop-@x2.png":[["hero-ellipse-pink-desktop-@x2.adc6ae97.png","images/hero/hero-ellipse-pink-desktop-@x2.png"],"images/hero/hero-ellipse-pink-desktop-@x2.png"],"./..\\images\\hero\\hero-milk-desktop-@x2.png":[["hero-milk-desktop-@x2.b2827192.png","images/hero/hero-milk-desktop-@x2.png"],"images/hero/hero-milk-desktop-@x2.png"],"./..\\images\\hero\\hero-ellipse-white-desktop-@x2.png":[["hero-ellipse-white-desktop-@x2.8f4dafb6.png","images/hero/hero-ellipse-white-desktop-@x2.png"],"images/hero/hero-ellipse-white-desktop-@x2.png"],"./..\\images\\him\\cow-milk.svg":[["cow-milk.cfeb594c.svg","images/him/cow-milk.svg"],"images/him/cow-milk.svg"],"./..\\images\\him\\apple-basket.svg":[["apple-basket.7a228932.svg","images/him/apple-basket.svg"],"images/him/apple-basket.svg"],"./..\\images\\him\\heart-candy.svg":[["heart-candy.74d01e15.svg","images/him/heart-candy.svg"],"images/him/heart-candy.svg"],"./..\\images\\him\\desktop\\how-its-made-milk.png":[["how-its-made-milk.e3ea5581.png","images/him/desktop/how-its-made-milk.png"],"images/him/desktop/how-its-made-milk.png"],"./..\\images\\him\\desktop\\how-its-made-milk@x2.png":[["how-its-made-milk@x2.14fc785b.png","images/him/desktop/how-its-made-milk@x2.png"],"images/him/desktop/how-its-made-milk@x2.png"],"D:\\IdeaProjests\\html\\team-icecream\\src\\images\\svg\\quatation-marks.svg":[["quatation-marks.8a0d1532.svg","images/svg/quatation-marks.svg"],"images/svg/quatation-marks.svg"],"./..\\images\\svg\\house.svg":[["house.8fab85ca.svg","images/svg/house.svg"],"images/svg/house.svg"],"./..\\images\\contacts\\contacts-bg.png":[["contacts-bg.85dfb50b.png","images/contacts/contacts-bg.png"],"images/contacts/contacts-bg.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./sass/main.scss");
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+})({"js/product1-btn.js":[function(require,module,exports) {
+(function () {
+  var menuBtnRef = document.querySelector("[data-product-button]");
+  var mobileMenuRef = document.querySelector("[data-produc-menu]");
+  menuBtnRef.addEventListener("click", function () {
+    var expanded = menuBtnRef.classList.toggle("btn-open");
+    mobileMenuRef.classList.toggle("product-open");
+  });
+})();
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -397,5 +330,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/product1-btn.js"], null)
+//# sourceMappingURL=/product1-btn.7bf4ea1a.js.map
