@@ -9,8 +9,16 @@ $colors: (
   'dark-background-color': #ffb8ca,
   'light-background-color': #fff5f6,
   'green': #c2e297,
+
   'hover-button': #c7133e,
   'hover-white-button': #ecebeb,
+
+  'text-decoration-color': #e1e1e1,
+  'slider-text-background': #fafafa,
+  'slider-reddots-color': #c7133e,
+  'slider-indicators-color': #d9d9d9,
+  'quotation-marks-color': rgba(126, 122, 122, 0.144),
+
 );
 
 @function getColor($key) {
