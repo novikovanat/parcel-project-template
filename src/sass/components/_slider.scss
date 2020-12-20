@@ -4,10 +4,36 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  background-image: linear-gradient(
+    to bottom,
+    getColor('light-background-color') 5.9%,
+    getColor('white') 6%
+  );
+
+  @include size(mobile) {
+    background-image: linear-gradient(
+      to bottom,
+      getColor('light-background-color') 8.1%,
+      getColor('white') 6%
+    );
+  }
+  @include size(tablet) {
+    background-image: linear-gradient(
+      to bottom,
+      getColor('light-background-color') 11.8%,
+      getColor('white') 6%
+    );
+  }
+  @include size(desktop) {
+    background-image: linear-gradient(
+      to bottom,
+      getColor('light-background-color') 15.8%,
+      getColor('white') 6%
+    );
+  }
 }
 
 .slider__section_collage {
-  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;
