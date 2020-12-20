@@ -253,7 +253,7 @@
   @include transition(fill);
 
   .btn-him:hover &,
-  .n-him:focus & {
+  .btn-him:focus & {
     fill: getColor('white');
   }
 }
