@@ -132,7 +132,7 @@
   position: absolute;
   right: 0;
   left: 0;
-  bottom: 175px;
+  bottom: 90px;
   z-index: 15;
   display: flex;
   justify-content: center;
@@ -142,6 +142,13 @@
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
+
+  @include size(tablet) {
+    bottom: 120px;
+  }
+  @include size(desktop) {
+    bottom: 130px;
+  }
 }
 
 .slider__indicators li {
