@@ -6,28 +6,28 @@
   text-align: center;
   background-image: linear-gradient(
     to bottom,
-    getColor('light-background-color') 5.9%,
+    getColor('light-background-color') 5.3%,
     getColor('white') 6%
   );
 
   @include size(mobile) {
     background-image: linear-gradient(
       to bottom,
-      getColor('light-background-color') 8.3%,
+      getColor('light-background-color') 7.4%,
       getColor('white') 6%
     );
   }
   @include size(tablet) {
     background-image: linear-gradient(
       to bottom,
-      getColor('light-background-color') 11.5%,
+      getColor('light-background-color') 11.6%,
       getColor('white') 6%
     );
   }
   @include size(desktop) {
     background-image: linear-gradient(
       to bottom,
-      getColor('light-background-color') 15.3%,
+      getColor('light-background-color') 15.6%,
       getColor('white') 6%
     );
   }
