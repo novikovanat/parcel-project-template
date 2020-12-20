@@ -1,10 +1,5 @@
-.him {
-  background-color: getColor('white');
-  display: block;
-
-  @media screen and(min-width: 768px) {
-    // display: flex;
-  }
+.him-background {
+  background-color: getColor('light-background-color');
 }
 
 .him-section-title {
@@ -54,22 +49,6 @@
   }
 }
 
-.sub-text-him {
-  font-family: DM Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 1.7;
-
-
-  color: #000000;
-}
-
-.text-black {
-  color: #000000;
-}
-
-
 .bullet-him {
   font-family: Titan One;
   font-size: 36px;
@@ -85,13 +64,6 @@
   @include size(tablet) {
     margin-top: 40px;
   }
-}
-
-.him-div {
-  text-align: left;
-  margin-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
 }
 
 .him-div-bg {
@@ -110,19 +82,32 @@
     color: getColor('black')
   }
 
+  .line {
+    padding-bottom: 17px;
+    @include size(tablet) {
+      padding-bottom: 62px;
+      @include size(desktop) {
+        padding-bottom: 45px;
+      }
+    }
+  }
+
   @include size(tablet) {
     width: 340px;
     padding-left: 17px;
     padding-right: 36px;
     font-size: 14px;
   }
+
   @include size(desktop) {
     min-width: 463px;
     font-size: 16px;
     padding-left: 74px;
     padding-right: 117px;
 
+
   }
+
 }
 
 .him-text-padding {
@@ -168,51 +153,24 @@
 }
 
 .btn-him {
-  position: relative;
+  font-family: DM Sans sans-serif;
   align-items: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-right: 40px;
-  padding-left: 40px;
-
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 18px;
-
   background: getColor('white');
-  border-radius: 22px;
   color: getColor('accent-color');
   border-color: transparent;
-
-  @include size(tablet){
-    margin-top: 32px;
-  }
-}
-
-.svg-btn-him {
-  position: absolute;
-  width: 10px;
-  height: 7px;
-
-  transform: translateY(-50%);
 }
 
 .him-flex-container {
   flex-grow: 1;
-  padding-left: 30px;
-  padding-right: 30px;
+  justify-content: space-between;
   padding-bottom: 39px;
 
   @include size(tablet) {
-    padding-left: 17px;
-    padding-right: 36px;
     padding-bottom: 66px;
     display: flex;
   }
 
   @include size(desktop) {
-    padding-left: 17px;
-    padding-right: 36px;
     padding-bottom: 66px;
   }
 }
@@ -230,17 +188,8 @@
   @include size(desktop) {
     width: 516px;
   }
-
 }
 
-.flex {
-  display: block;
-
-  @media screen and(min-width: 768px) {
-    display: flex;
-    justify-content: space-between;
-  }
-}
 
 .him-svg {
   width: 33px;
@@ -248,10 +197,22 @@
   fill: black;
 }
 
-.him-list:not(:last-child) {
-  margin-bottom: 38px;
+.him-list {
+  padding-left: 20px;
+  @include size(tablet) {
+    padding-left: 0;
+  }
+}
 
-  @media screen and(min-width: 768px) {
-    margin-right: 60px;
+.him-item {
+  width: 100%;
+  @include size(mobile) {
+    size: 150px;
+  }
+  @include size(tablet) {
+    width: 180px;
+  }
+  @include size(desktop) {
+    width: 222px;
   }
 }
