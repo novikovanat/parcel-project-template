@@ -176,6 +176,7 @@
   width: 10px;
   margin-left: 8px;
   fill: getColor('accent-color');
+  @include transition(fill);
 }
 
 .contacts-btn {
@@ -201,7 +202,6 @@
 
   &:focus .arrow-svg,
   &:hover .arrow-svg {
-    @include transition('transition-property');
     fill: getColor('white');
   }
 }
@@ -209,12 +209,12 @@
 .contacts-btn:nth-child(odd) {
   color: getColor('white');
   background-color: getColor('accent-color');
+  @include transition(color);
 
   &:focus,
   &:hover,
   &:focus .arrow-svg,
   &:hover .arrow-svg {
-    @include transition('transition-property');
     color: getColor('accent-color');
     background-color: getColor('white');
     fill: getColor('accent-color');
@@ -223,4 +223,5 @@
 
 .contacts-btn:nth-child(odd) .arrow-svg {
   fill: getColor('white');
+  @include transition(fill);
 }
