@@ -92,55 +92,95 @@
   }
 }
 
-.slider__content_text {
+.slider__content_box {
   position: relative;
-  width: 100%;
-  height: auto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 2.55;
-  color: getColor('black');
-  text-decoration-color: getColor('text-decoration-color');
-  text-decoration-line: underline;
-  text-underline-offset: 0.7em;
-  background: getColor('slider-text-background');
-  padding: 43px 50px 20px 50px;
+  margin-bottom: 15px;
+  text-align: center;
+  background-color: getColor('slider-text-background');
+  z-index: -1;
+  padding: 43px 66px 26px 57px;
 
   @include size(tablet) {
-    padding: 47px 80px 34px 80px;
-    font-size: 14px;
+    padding: 47px 36px 28px 60px;
   }
   @include size(desktop) {
-    padding: 47px 89px 39px 87px;
-    font-size: 16px;
+    padding: 47px 36px 28px 60px;
+  }
+}
+
+.slider__content_gradient {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-size: 62px 60px;
+  background-image: linear-gradient(
+    180deg,
+    getColor('text-decoration-color') 1.61%,
+    getColor('slider-text-background') 0,
+    getColor('slider-text-background') 50%,
+    getColor('text-decoration-color') 0,
+    getColor('text-decoration-color') 51.61%,
+    getColor('slider-text-background') 0,
+    getColor('slider-text-background')
+  );
+}
+
+.slider__content_gradientbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 71px 50px 20px;
+
+  @include size(tablet) {
+    padding: 76px 36px 28px 60px;
+  }
+  @include size(desktop) {
+    padding: 76px 36px 28px 60px;
+  }
+}
+
+.slider__content_text {
+  position: relative;
+  z-index: 2;
+  font-size: 12px;
+  line-height: 2.55;
+  letter-spacing: 0.04em;
+
+  @include size(mobile-only) {
+    max-width: 620px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
 .slider__content_text::before {
   position: absolute;
-  content: '\201D';
-  font-family: serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 140px;
-  top: -110px;
-  left: 40px;
+  content: '';
+  top: 0;
+  left: 0;
+  transform: translate(-10px, -15px);
+  z-index: -1;
+  display: block;
+  width: 54px;
+  height: 40px;
   color: getColor('quotation-marks-color');
+  background-image: url(/images/svg/quatation-marks.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @include size(tablet) {
-    top: -102px;
-    left: 45px;
+    transform: translate(-15px, -17px);
   }
   @include size(desktop) {
-    top: -99px;
-    left: 48px;
+    transform: translate(-15px, -15px);
   }
 }
 
 .slider__content_reddot {
   border-radius: 4px;
-  background-color: getColor('slider-reddots-color');
+  background-color: getColor('hover-button');
 }
 
 .slider__content_title {
