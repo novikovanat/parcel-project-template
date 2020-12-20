@@ -15,10 +15,8 @@ $colors: (
   'menu-border-cl': #e18298,
   'text-decoration-color': #e1e1e1,
   'slider-text-background': #fafafa,
-  'slider-reddots-color': #c7133e,
   'slider-indicators-color': #d9d9d9,
   'quotation-marks-color': rgba(126, 122, 122, 0.144),
-
 );
 
 @function getColor($key) {
