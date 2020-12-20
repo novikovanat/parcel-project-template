@@ -97,7 +97,6 @@
   margin-bottom: 15px;
   text-align: center;
   background-color: getColor('slider-text-background');
-  z-index: -1;
   padding: 43px 66px 26px 57px;
 
   @include size(tablet) {
