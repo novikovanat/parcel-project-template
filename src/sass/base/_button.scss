@@ -9,6 +9,7 @@
   font-size: 16px;
   line-height: 1.31;
   color: getColor('accent-color');
+  @include transition(color background-color);
 
   padding-left: 37px;
   padding-right: 37px;
