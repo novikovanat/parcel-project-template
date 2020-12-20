@@ -7,6 +7,10 @@ body {
   color: getColor('black');
 
   @include size(tablet) {
+    font-size: 14px;
+  }
+
+  @include size(desktop) {
     font-size: 16px;
   }
 }
