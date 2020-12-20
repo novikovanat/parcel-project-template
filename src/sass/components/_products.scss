@@ -249,6 +249,9 @@
 
   background-color: getColor('white');
   border: 0px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
 
   &:hover,
   &:focus {
@@ -275,7 +278,4 @@
 
 .cards-icon {
   fill: getColor('accent-color');
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
 }
