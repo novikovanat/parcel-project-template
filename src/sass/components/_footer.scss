@@ -56,6 +56,8 @@
   &-container {
     display: flex;
     flex-direction: column;
+    padding-right: 10px;
+    padding-left: 10px;
     @include size(tablet) {
       flex-direction: row;
     }
@@ -80,9 +82,12 @@
   &-contact {
     color: getColor('accent-color');
   }
+  &-text {
+    text-align: right;
+  }
   &-social {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
   }
   &-social-svg {
     width: inherit;
@@ -106,7 +111,7 @@
     height: 34px;
     border-radius: 50%;
     background-color: getColor('intensive-pink');
-    @include transition('background-color');
+    @include transition(background-color);
     &:focus,
     &:hover {
       background-color: getColor('accent-color');
