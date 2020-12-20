@@ -12,7 +12,12 @@
 
   background-image: url(../images/hero/hero-ice-mobile-1x.png),
     url(../images/hero/hero-ellipse-pink-tablet-1x.png);
-  background-position: bottom right 32px, right -50px center;
+  // background-position: bottom right 32px, right -50px center;
+
+  @include size(mobile-only) {
+    background-position: bottom right 80px, right 5px center;
+  }
+
   background-repeat: no-repeat;
 
   @media screen and (min-device-pixel-ratio: 2),
@@ -163,10 +168,12 @@
   background-color: getColor('accent-color');
 
   cursor: pointer;
+  @include transition(color background-color);
 
   &:hover,
   &:focus {
-    background-color: getColor('hover-button');
+    color: getColor('accent-color');
+    background-color: getColor('white');
   }
 
   @include size(desktop) {
@@ -189,7 +196,8 @@
 
   &:hover,
   &:focus {
-    background-color: getColor('hover-white-button');
+    color: getColor('white');
+    background-color: getColor('accent-color');
   }
 
   @include size(desktop) {
@@ -289,7 +297,7 @@
   border-radius: 50%;
   background-color: getColor('white');
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(background-color);
 
   @include size(desktop) {
     width: 26px;
@@ -300,7 +308,12 @@
 
   &:hover,
   &:focus {
-    background-color: #ecebeb;
+    background-color: getColor('accent-color');
+  }
+
+  &:hover .svg-arrow,
+  &:focus .svg-arrow {
+    fill: getColor('white');
   }
 }
 

@@ -64,6 +64,34 @@
   @include size(tablet) {
     margin-top: 40px;
   }
+
+  &::before{
+    content: "";
+    display: block;
+    background-repeat: no-repeat;
+    height: 50px;
+    margin-bottom: 16px;
+    @include size(tablet){
+      margin-bottom: 36px;
+    }
+    @include size(desktop){
+      margin-bottom: 40px
+    }
+  }
+}
+.milk::before{
+  background-image: url("../../src/images/him/cow-milk.svg");
+  width: 33px;}
+
+
+.apple::before{
+  background-image: url("../../src/images/him/apple-basket.svg");
+  width: 50px;
+}
+
+.candy::before{
+  background-image: url("../../src/images/him/heart-candy.svg");
+  width: 44px;
 }
 
 .him-div-bg {
@@ -116,7 +144,7 @@
 }
 
 .him-bg {
-  //background-image: url(./images/him/desktop/how-its-made-milk.png);
+  background-image: url(../../src/images/him/desktop/how-its-made-milk.png);
   background-repeat: no-repeat;
   background-size: contain;
 
@@ -125,11 +153,7 @@
   screen and (-o-min-device-pixel-ratio: 2/1),
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
-    //background-image: url(./images/him/desktop/how-its-made-milk.png);
-  }
-
-  @media screen and(min-width: 481px) {
-
+    background-image: url(../../src/images/him/desktop/how-its-made-milk@x2.png)
   }
 
   // tablet
@@ -140,17 +164,19 @@
   // desktop
   @media screen and(min-width: 1200px) {
     background-position-x: center;
-    //background-image: url(../images/him/desktop/how-its-made-milk.png);
+    background-image: url(../../src/images/him/desktop/how-its-made-milk.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 
     @media screen and (min-device-pixel-ratio: 2),
     screen and (-webkit-min-device-pixel-ratio: 2),
     screen and (-o-min-device-pixel-ratio: 2/1),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-      //background-image: url(../images/him/desktop/how-its-made-milk@x2.png);
+      background-image: url(../../src/images/him/desktop/how-its-made-milk@x2.png)
+    }
     }
   }
-}
 
 .btn-him {
   align-items: center;
@@ -161,7 +187,7 @@
 
 .him-flex-container {
   flex-grow: 1;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding-bottom: 39px;
 
   @include size(tablet) {
@@ -198,8 +224,8 @@
 
 .him-list {
   padding-left: 20px;
-  @include size(tablet) {
-    padding-left: 0;
+  @include size(tablet-only) {
+    padding-left: 15px;
   }
 }
 
@@ -214,4 +240,12 @@
   @include size(desktop) {
     width: 222px;
   }
+}
+
+.him-svg {
+  fill: getColor('accent-color');
+  width: 10px;
+  height: 10px;
+  display: block;
+  margin-left:10px;
 }

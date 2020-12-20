@@ -26,5 +26,7 @@
     "posthtml-include": "^1.4.3",
     "sass": "^1.26.9"
   },
-  "dependencies": {}
+  "dependencies": {
+    "caniuse-lite": "^1.0.30001170"
+  }
 }
