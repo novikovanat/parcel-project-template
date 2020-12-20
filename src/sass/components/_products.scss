@@ -232,19 +232,18 @@
 }
 
 .icon-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: auto;
-  margin-left: auto;
-  outline: none;
+  position: absolute;
+  left: 120px;
+  right: 120px;
+  bottom: 60px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: getColor('white');
-
-  @include transition(background-color);
-  margin-top: 30px;
+  border: 0px;
 
   &:hover,
   &:focus {
@@ -257,16 +256,21 @@
   }
 
   @include size(tablet) {
-    margin-top: 40px;
+    left: 90px;
+    right: 90px;
+    bottom: 40px;
   }
 
   @include size(desktop) {
-    margin-top: 62px;
+    left: 145px;
+    right: 145px;
+    bottom: 50px;
   }
 }
 
 .cards-icon {
-  width: 18px;
-  height: 18px;
   fill: getColor('accent-color');
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
 }
