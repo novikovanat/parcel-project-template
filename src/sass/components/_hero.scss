@@ -15,6 +15,17 @@
   background-position: bottom right 32px, right -50px center;
   background-repeat: no-repeat;
 
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero-container {
+      background-image: url(../images/hero/hero-ice-mobile-@x2.png),
+        url(../images/hero/hero-ellipse-pink-tablet-@x2.png);
+    }
+  }
+
   @include size(tablet) {
     padding-top: 102px;
     padding-bottom: 173px;
@@ -30,6 +41,21 @@
     background-position: bottom right 247px, bottom right 34px,
       right 137px bottom 46px, left 34px bottom 28px, top 94px right 34px,
       top 151px right 34px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      .hero-container {
+        background-image: url(../images/hero/hero-ice-tablet-@x2.png),
+          url(../images/hero/hero-woman-tablet-@x2.png),
+          url(../images/hero/hero-ellipse-pink-tablet-@x2.png),
+          url(../images/hero/hero-milk-tablet-@x2.png),
+          url(../images/hero/hero-ellipse-white-tablet-@x2.png),
+          url(../images/hero/hero-ellipse-white-tablet-@x2.png);
+      }
+    }
   }
 
   @include size(desktop) {
@@ -46,16 +72,21 @@
     background-position: bottom right 450px, bottom right 109px,
       right 267px bottom 75px, left 77px bottom 45px, top 156px right 97px,
       top 248px right 97px;
-  }
-}
 
-@media screen and(min-width:1200px) {
-    // background-position-x: center;
-    background-image: url(тут все твои имеджи обынчные);
-  }
-  
-  @extend %media-retina {
-    background-image: url(тут все твои имеджи для ретины);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      .hero-container {
+        background-image: url(../images/hero/hero-ice-desktop-@x2.png),
+          url(../images/hero/hero-woman-desktop-@x2.png),
+          url(../images/hero/hero-ellipse-pink-desktop-@x2.png),
+          url(../images/hero/hero-milk-desktop-@x2.png),
+          url(../images/hero/hero-ellipse-white-desktop-@x2.png),
+          url(../images/hero/hero-ellipse-white-desktop-@x2.png);
+      }
+    }
   }
 }
 
