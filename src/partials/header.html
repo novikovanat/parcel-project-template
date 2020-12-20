@@ -1,30 +1,46 @@
 <header>
   <div class="container header">
-    <nav class="header-nav">
-      <a class="header-logo" href="index.html"></a>
-      <div class="header-menu-container" data-menu>
-        <button class="header-close-btn" type="button">
-        </button>
-        <button class="header-order-btn_menu" type="button">Buy now
+      <nav class="header-nav">
+        <a class="header-logo" href="index.html"></a>
+        <div class="header-menu-container" data-menu>
+          <button class="header-close-btn" type="button" data-menu-close>
+            <svg width="30px" height="30px">
+              <use class="header-close-icon" href="./images/svg/sprite.svg#close-icon"></use>
+            </svg>
+          </button>
+          <button class="button header-order-btn_menu" type="button">Buy now
+            <svg class="header-order-icon" width="7px" height="10px">
+              <use href="./images/svg/sprite.svg#arrow-right"></use>
+            </svg>
+      
+          </button>
+          <ul class="header-menu">
+            <li class="item"><a class="header-menu-link" href="index.html">Home</a></li>
+            <li class="item"><a class="header-menu-link" href="">About us</a></li>
+            <li class="item"><a class="header-menu-link" href="#him">How it’s made?</a></li>
+            <li class="item"><a class="header-menu-link" href="#products">Our products</a></li>
+            <li class="item"><a class="header-menu-link" href="#contacts">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <ul class="header-btn-container">
+        <li class="item">
+          <button class="header-burger" type="button" data-menu-button>
+            <svg width="30px" height="30px">
+              <use class="header-burger-icon" href="./images/svg/sprite.svg#burger-icon"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="item">
+          <button class="button header-order-btn" type="button">Buy now
+            <svg class="header-order-icon" width="7px" height="10px">
+              <use href="./images/svg/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
 
-        </button>
-        <ul class="header-menu" >
-          <li class="item"><a class="header-menu-link" href="index.html">Home</a></li>
-          <li class="item"><a class="header-menu-link" href="">About us</a></li>
-          <li class="item"><a class="header-menu-link" href="">How it’s made?</a></li>
-          <li class="item"><a class="header-menu-link" href="">Our products</a></li>
-          <li class="item"><a class="header-menu-link" href="">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <ul class="header-btn-container">
-      <li class="item"><button class="header-burger" type="button" data-menu-button>
-
-        </button></li>
-      <li class="item">
-        <button class="header-order-btn" type="button">Buy now
-        </button>
-      </li>
-    </ul>
+    
+    
   </div>
 </header>
