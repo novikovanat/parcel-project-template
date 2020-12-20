@@ -15,11 +15,11 @@
   height: 44px;
   border-radius: 22px;
   border: 0;
-  background-color: white;
+  background-color: getColor('white');
 
   &:focus,
   &:hover {
-    color: white;
+    color: getColor('white');
     background-color: getColor('accent-color');
   }
 }
