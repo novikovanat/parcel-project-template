@@ -4,9 +4,38 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  background-image: linear-gradient(
+    to bottom,
+    getColor('light-background-color') 5.9%,
+    getColor('white') 6%
+  );
+
+  @include size(mobile) {
+    background-image: linear-gradient(
+      to bottom,
+      getColor('light-background-color') 8.1%,
+      getColor('white') 6%
+    );
+  }
+  @include size(tablet) {
+    background-image: linear-gradient(
+      to bottom,
+      getColor('light-background-color') 11.8%,
+      getColor('white') 6%
+    );
+  }
+  @include size(desktop) {
+    background-image: linear-gradient(
+      to bottom,
+      getColor('light-background-color') 15.8%,
+      getColor('white') 6%
+    );
+  }
 }
 
 .slider__section_collage {
+  top: 0;
+  left: 0;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -47,58 +76,6 @@
   padding-right: 10px;
 }
 
-/* .slider__control {
-  position: absolute;
-  top: 0;
-  bottom: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 25px;
-  color: #fff;
-  text-align: center;
-  background: #fff;
-
-  @include size(tablet) {
-    width: 35px;
-  }
-  @include size(desktop) {
-    width: 50px;
-  }
-}
-
-.slider__control:hover,
-.slider__control:focus {
-  color: #fff;
-  text-decoration: none;
-  outline: 0;
-}
-
-.slider__control_left {
-  left: 0;
-}
-
-.slider__control_right {
-  right: 0;
-}
-
-.slider__control::before {
-  content: '';
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: transparent no-repeat center center;
-  background-size: 100% 100%;
-}
-
-.slider__control_left::before {
-  background-image: url('../images/svg/arrow-left.svg');
-}
-
-.slider__control_right::before {
-  background-image: url('../images/svg/arrow-right.svg');
-} */
-
 .slider__content_img {
   display: block;
   height: auto;
@@ -119,23 +96,24 @@
   position: relative;
   width: 100%;
   height: auto;
-  font-family: DM Sans;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 2.55;
-  color: 'black';
-  text-decoration-color: #e1e1e1;
+  color: getColor('black');
+  text-decoration-color: getColor('text-decoration-color');
   text-decoration-line: underline;
   text-underline-offset: 0.7em;
-  background: #fafafa;
+  background: getColor('slider-text-background');
   padding: 43px 50px 20px 50px;
 
   @include size(tablet) {
-    padding: 47px 36px 28px 60px;
+    padding: 47px 80px 34px 80px;
+    font-size: 14px;
   }
   @include size(desktop) {
-    padding: 47px 59px 39px 59px;
+    padding: 47px 89px 39px 87px;
+    font-size: 16px;
   }
 }
 
@@ -145,36 +123,41 @@
   font-family: serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 150px;
-  top: -120px;
+  font-size: 140px;
+  top: -110px;
   left: 40px;
-  color: rgba(126, 122, 122, 0.144);
-  text-shadow: 7px 14px 10px rgba(0, 0, 0, 0.1);
+  color: getColor('quotation-marks-color');
 
+  @include size(tablet) {
+    top: -102px;
+    left: 45px;
+  }
   @include size(desktop) {
-    left: 50px;
+    top: -99px;
+    left: 48px;
   }
 }
 
 .slider__content_reddot {
   border-radius: 4px;
-  background-color: #c7133e;
+  background-color: getColor('slider-reddots-color');
 }
 
 .slider__content_title {
   font-family: DM Sans;
   font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.86;
-  color: 'black';
-  padding-bottom: 212px;
+  color: getColor('black');
+  padding-bottom: 128px;
 
   @include size(tablet) {
-    padding-bottom: 244px;
+    padding-bottom: 166px;
+    font-size: 16px;
   }
   @include size(desktop) {
-    padding-bottom: 215px;
+    padding-bottom: 179px;
+    font-size: 20px;
   }
 }
 
@@ -182,7 +165,7 @@
   position: absolute;
   right: 0;
   left: 0;
-  bottom: 175px;
+  bottom: 90px;
   z-index: 15;
   display: flex;
   justify-content: center;
@@ -192,6 +175,13 @@
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
+
+  @include size(tablet) {
+    bottom: 120px;
+  }
+  @include size(desktop) {
+    bottom: 130px;
+  }
 }
 
 .slider__indicators li {
@@ -203,7 +193,7 @@
   margin-left: 9px;
   text-indent: -999px;
   cursor: pointer;
-  background-color: #d9d9d9;
+  background-color: getColor('slider-indicators-color');
   background-clip: padding-box;
   border-radius: 100px;
   opacity: 0.5;
