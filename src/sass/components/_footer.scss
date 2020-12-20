@@ -106,6 +106,7 @@
     height: 34px;
     border-radius: 50%;
     background-color: getColor('intensive-pink');
+    @include transition('background-color');
     &:focus,
     &:hover {
       background-color: getColor('accent-color');
