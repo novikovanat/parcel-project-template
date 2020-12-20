@@ -13,21 +13,21 @@
   @include size(mobile) {
     background-image: linear-gradient(
       to bottom,
-      getColor('light-background-color') 8.1%,
+      getColor('light-background-color') 8.3%,
       getColor('white') 6%
     );
   }
   @include size(tablet) {
     background-image: linear-gradient(
       to bottom,
-      getColor('light-background-color') 11.8%,
+      getColor('light-background-color') 11.5%,
       getColor('white') 6%
     );
   }
   @include size(desktop) {
     background-image: linear-gradient(
       to bottom,
-      getColor('light-background-color') 15.8%,
+      getColor('light-background-color') 15.3%,
       getColor('white') 6%
     );
   }
