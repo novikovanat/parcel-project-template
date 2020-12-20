@@ -171,11 +171,21 @@
   }
 }
 
-.arrow-svg {
+.contacts-arrow-svg {
   height: 20px;
   width: 10px;
   margin-left: 8px;
+}
+
+.contacts-btn:nth-child(odd) .contacts-arrow-svg {
+  fill: getColor('white');
+  background-color: transparent;
+  @include transition(fill);
+}
+
+.contacts-btn:nth-child(even) .contacts-arrow-svg {
   fill: getColor('accent-color');
+  background-color: transparent;
   @include transition(fill);
 }
 
@@ -200,8 +210,8 @@
     }
   }
 
-  &:focus .arrow-svg,
-  &:hover .arrow-svg {
+  &:focus .contacts-arrow-svg,
+  &:hover .contacts-arrow-svg {
     fill: getColor('white');
   }
 }
@@ -212,16 +222,15 @@
   @include transition(color background-color);
 
   &:focus,
-  &:hover,
-  &:focus .arrow-svg,
-  &:hover .arrow-svg {
+  &:hover {
     color: getColor('accent-color');
     background-color: getColor('white');
-    fill: getColor('accent-color');
   }
-}
 
-.contacts-btn:nth-child(odd) .arrow-svg {
-  fill: getColor('white');
-  @include transition(fill);
+  &:focus,
+  &:hover {
+    .contacts-arrow-svg {
+      fill: getColor('accent-color');
+    }
+  }
 }
