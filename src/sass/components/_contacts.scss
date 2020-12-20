@@ -209,7 +209,7 @@
 .contacts-btn:nth-child(odd) {
   color: getColor('white');
   background-color: getColor('accent-color');
-  @include transition(color);
+  @include transition(color background-color);
 
   &:focus,
   &:hover,
