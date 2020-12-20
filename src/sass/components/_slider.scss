@@ -109,10 +109,12 @@
   padding: 43px 50px 20px 50px;
 
   @include size(tablet) {
-    padding: 47px 36px 28px 60px;
+    padding: 47px 80px 34px 80px;
+    font-size: 14px;
   }
   @include size(desktop) {
-    padding: 47px 59px 39px 59px;
+    padding: 47px 89px 39px 87px;
+    font-size: 16px;
   }
 }
 
@@ -127,8 +129,13 @@
   left: 40px;
   color: getColor('quotation-marks-color');
 
+  @include size(tablet) {
+    top: -102px;
+    left: 45px;
+  }
   @include size(desktop) {
-    left: 30px;
+    top: -99px;
+    left: 48px;
   }
 }
 
