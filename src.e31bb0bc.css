@@ -69,6 +69,7 @@ button {
   background-color: #ffffff;
 }
 .button:focus, .button:hover {
+  transform: scale(1.1);
   color: #ffffff;
   background-color: #d41443;
 }
@@ -78,7 +79,7 @@ button {
 }
 
 .icon-link {
-  transform: rotate(0deg);
+  transition-duration: 0.5s;
 }
 .icon-link.btn-open {
   transition-duration: 0.5s;
@@ -92,6 +93,7 @@ button {
   bottom: 100px;
   top: 30px;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .overflow {
@@ -100,6 +102,7 @@ button {
   width: 280px;
   background-color: inherit;
   transform: translateY(250%);
+  transition-duration: 1s;
   z-index: 2;
   padding-top: 10px;
   padding-left: 16px;
@@ -131,6 +134,7 @@ button {
 .overflow.product-open {
   transition-duration: 1s;
   transform: translateY(0%);
+  pointer-events: auto;
 }
 .overflow-list {
   display: flex;
@@ -196,7 +200,6 @@ button {
   width: 100%;
   flex-direction: column;
   justify-content: center;
-  /*     font-family: Titan One; */
   font-style: normal;
   font-weight: normal;
   text-align: center;
@@ -215,53 +218,30 @@ button {
   }
 }
 
-.first {
-  opacity: 0;
-}
-
-.second {
-  opacity: 0;
-}
-
+.first,
+.second,
 .three {
   opacity: 0;
 }
 
 .img1:hover ~ .first {
-  animation-name: anim;
-  animation-duration: 1s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: alternate;
-  animation-fill-mode: forwards;
-  opacity: 1;
+  animation: anim 1200ms cubic-bezier(0.4, 0, 0.2, 1) 0s 1 alternate forwards;
 }
 
 .img2:hover ~ .second {
-  animation-name: anim;
-  animation-duration: 1s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: alternate;
-  animation-fill-mode: forwards;
-  opacity: 1;
+  animation: anim 1200ms cubic-bezier(0.4, 0, 0.2, 1) 0s 1 alternate forwards;
 }
 
 .img3:hover ~ .three {
-  animation-name: anim;
-  animation-duration: 1s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: alternate;
-  animation-fill-mode: forwards;
-  opacity: 1;
+  animation: anim 1200ms cubic-bezier(0.4, 0, 0.2, 1) 0s 1 alternate forwards;
 }
 
+/* Тут вопрос как красивее */
+/* .zero {
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+} */
 .overflow-img-cont:hover ~ .zero {
-  opacity: 0;
+  animation: anim 1200ms cubic-bezier(0.4, 0, 0.2, 1) 0s 1 alternate-reverse forwards;
 }
 
 @keyframes anim {
@@ -684,6 +664,7 @@ body {
 .hero-button:hover, .hero-button:focus {
   color: #d41443;
   background-color: #ffffff;
+  transform: scale(1.07);
 }
 @media (min-width: 1200px) {
   .hero-button {
@@ -1392,21 +1373,21 @@ body {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  background-image: linear-gradient(to bottom, #fff5f6 5.9%, #ffffff 6%);
+  background-image: linear-gradient(to bottom, #fff5f6 5.3%, #ffffff 6%);
 }
 @media (min-width: 480px) {
   .slider__section {
-    background-image: linear-gradient(to bottom, #fff5f6 8.3%, #ffffff 6%);
+    background-image: linear-gradient(to bottom, #fff5f6 7.4%, #ffffff 6%);
   }
 }
 @media (min-width: 768px) {
   .slider__section {
-    background-image: linear-gradient(to bottom, #fff5f6 11.5%, #ffffff 6%);
+    background-image: linear-gradient(to bottom, #fff5f6 11.6%, #ffffff 6%);
   }
 }
 @media (min-width: 1200px) {
   .slider__section {
-    background-image: linear-gradient(to bottom, #fff5f6 15.3%, #ffffff 6%);
+    background-image: linear-gradient(to bottom, #fff5f6 15.6%, #ffffff 6%);
   }
 }
 
@@ -1677,6 +1658,12 @@ body {
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transform: scale(1);
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts-card:hover {
+  transform: scale(1.1);
 }
 @media (min-width: 768px) {
   .contacts-card {
