@@ -175,8 +175,6 @@
     color: getColor('accent-color');
     background-color: getColor('white');
     transform: scale(1.07);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   @include size(desktop) {
