@@ -22,6 +22,7 @@ button {
 
   &:focus,
   &:hover {
+    transform: scale(1.1);
     color: getColor('white');
     background-color: getColor('accent-color');
   }
