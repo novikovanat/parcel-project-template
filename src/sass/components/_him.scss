@@ -140,28 +140,26 @@
 }
 
 .him-bg {
-  background-image: url(../../src/images/him/desktop/how-its-made-milk.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  @include retina() {
-    background-image: url(../../src/images/him/desktop/how-its-made-milk@x2.png)
-  }
-
-  // tablet
-  @include size(tablet) {
-    padding-left: 17px;
-  }
-
-
-  @include size(desktop) {
-    background-position-x: center;
+  @media (max-width: 2500px) {
     background-image: url(../../src/images/him/desktop/how-its-made-milk.png);
     background-repeat: no-repeat;
     background-size: contain;
-
+    background-position-y: 50%;
     @include retina() {
       background-image: url(../../src/images/him/desktop/how-its-made-milk@x2.png)
+    }
+
+    // tablet
+    @include size(tablet) {
+      padding-left: 17px;
+      background-position-y: 39%;
+    }
+
+
+    @include size(desktop) {
+      background-position-x: center;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   }
 }
