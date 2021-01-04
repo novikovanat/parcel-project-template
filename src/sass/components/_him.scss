@@ -106,7 +106,18 @@
   color: getColor('gray-text');
   margin-top: 46px;
   margin-bottom: 25px;
-
+  @include size(tablet) {
+    width: 340px;
+    padding-left: 17px;
+    padding-right: 36px;
+    font-size: 14px;
+  }
+  @include size(desktop) {
+    min-width: 463px;
+    font-size: 16px;
+    padding-left: 74px;
+    padding-right: 117px;
+  }
 
   :first-child {
     color: getColor('black')
@@ -116,28 +127,11 @@
     padding-bottom: 17px;
     @include size(tablet) {
       padding-bottom: 62px;
-      @include size(desktop) {
-        padding-bottom: 45px;
-      }
+    }
+    @include size(desktop) {
+      padding-bottom: 45px;
     }
   }
-
-  @include size(tablet) {
-    width: 340px;
-    padding-left: 17px;
-    padding-right: 36px;
-    font-size: 14px;
-  }
-
-  @include size(desktop) {
-    min-width: 463px;
-    font-size: 16px;
-    padding-left: 74px;
-    padding-right: 117px;
-
-
-  }
-
 }
 
 .him-text-padding {
@@ -150,31 +144,23 @@
   background-repeat: no-repeat;
   background-size: contain;
 
-  @media screen and (min-device-pixel-ratio: 2),
-  screen and (-webkit-min-device-pixel-ratio: 2),
-  screen and (-o-min-device-pixel-ratio: 2/1),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
+  @include retina() {
     background-image: url(../../src/images/him/desktop/how-its-made-milk@x2.png)
   }
 
   // tablet
-  @media screen and(min-width: 768px) {
+  @include size(tablet) {
     padding-left: 17px;
   }
 
-  // desktop
-  @media screen and(min-width: 1200px) {
+
+  @include size(desktop) {
     background-position-x: center;
     background-image: url(../../src/images/him/desktop/how-its-made-milk.png);
     background-repeat: no-repeat;
     background-size: contain;
 
-    @media screen and (min-device-pixel-ratio: 2),
-    screen and (-webkit-min-device-pixel-ratio: 2),
-    screen and (-o-min-device-pixel-ratio: 2/1),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
+    @include retina() {
       background-image: url(../../src/images/him/desktop/how-its-made-milk@x2.png)
     }
   }
