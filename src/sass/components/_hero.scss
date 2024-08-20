@@ -13,12 +13,11 @@
   background-image: url(../images/hero/hero-ice-mobile-1x.png),
     url(../images/hero/hero-ellipse-pink-tablet-1x.png);
   // background-position: bottom right 32px, right -50px center;
+  background-repeat: no-repeat;
 
   @include size(mobile-only) {
     background-position: bottom right 80px, right 5px center;
   }
-
-  background-repeat: no-repeat;
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (-webkit-min-device-pixel-ratio: 2),
